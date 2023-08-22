@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>momo</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="head">메모앱</div>
+        <div class="body">
+            <div v-if="mode === 'list'" clas="list">
+                <ul>
+                    <li v-for="m in memos" @click="open(m.id)">
+                        {{ m.content }}
+                    </li>
+                </ul>
+            </div>
+            <div v-else class="write">
+                <textarea v-model="memo.content"></textarea>
+                <div class="btns">
+                    <button
+                        type="button"
+                        class="save-btn"
+                        @click="save">
+                        저장
+                    </button>
+                    <button
+                        type="button"
+                        class="cancel-btn"
+                        @click="mode = 'list'">
+                        취소
+                    </button>
+                    <button
+                        type="button"
+                        class="remove-btn"
+                        v-if="mode === 'edit'"
+                        @click="remove">
+                        삭제
+                    </button>
+                </div>
+            </div>
+            <button
+                type="button"
+                class="addBtn"
+                @click="write"
+                v-if="mode === 'list'">
+                +</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>

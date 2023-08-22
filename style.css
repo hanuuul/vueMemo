@@ -1,0 +1,61 @@
+.head{
+    font-size: 20px;
+    padding: 20px;
+    background: #07c;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.body ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.body ul li{
+    padding: 20px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.body .addBtn{
+    display: inline-block;
+    font-size: 36px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background: #07c;
+    color: #fff;
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+.body .write textarea{
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.body .write .btns{
+    display: flex;
+    justify-content: space-between;
+}
+.body .write button{
+    width: 49%;
+    background: #333;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.body .write .save-btn{
+    background: #07c;
+}
+
